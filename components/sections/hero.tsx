@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { industries, stats } from "@/content/site";
 
@@ -13,6 +14,25 @@ export function Hero() {
           <span className="h-1.5 w-1.5 rounded-full bg-primary" />
           Freie Kapazität ab dem nächsten Monat
         </p>
+
+        <div className="mb-8 flex items-center gap-3.5">
+          <Image
+            src="/img/kerim-portrait.jpg"
+            alt="Kerim Quintino"
+            width={240}
+            height={240}
+            priority
+            className="h-12 w-12 rounded-full border border-border object-cover"
+          />
+          <div>
+            <p className="text-[15px] font-medium leading-tight">
+              Kerim Quintino
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Social Media Manager, kein Agenturteam
+            </p>
+          </div>
+        </div>
 
         <h1 className="display max-w-3xl text-[40px] sm:text-6xl lg:text-7xl">
           Dein Kanal soll Kunden bringen. Nicht Likes.
