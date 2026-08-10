@@ -35,7 +35,9 @@ export function Hero() {
         </div>
 
         <h1 className="display max-w-3xl text-[40px] sm:text-6xl lg:text-7xl">
-          Menschen kaufen von Menschen. Nicht von Logos.
+          {/* Fester Umbruch, damit der zweite Satz nicht zerrissen wird. */}
+          <span className="block">Menschen kaufen von Menschen.</span>
+          <span className="block">Nicht von Logos.</span>
         </h1>
 
         <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
