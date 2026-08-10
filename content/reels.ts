@@ -28,6 +28,18 @@ export type Reel = {
 
 export const reels: Reel[] = [
   {
+    slug: "robert-podcast",
+    client: "Robert Schwagerus",
+    handle: "robertschwagerus",
+    title: "350 PS für Papa",
+    format: "Podcast Short",
+    aspect: "9:16",
+    views: null,
+    likes: null,
+    comments: null,
+    why: "Aus einer Stunde Aufnahme wird ein Clip, der allein steht. Der Hook ist eine Geschichte, keine Kennzahl, und wer sie anfängt, will das Ende hören.",
+  },
+  {
     slug: "mert-foodguide",
     client: "Mert Güler",
     handle: "_mertgueler",
