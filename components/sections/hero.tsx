@@ -15,7 +15,7 @@ export function Hero() {
         </p>
 
         <h1 className="display max-w-3xl text-[40px] sm:text-6xl lg:text-7xl">
-          Dein Kanal soll Termine bringen. Nicht Likes.
+          Dein Kanal soll Kunden bringen. Nicht Likes.
         </h1>
 
         <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
