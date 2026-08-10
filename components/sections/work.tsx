@@ -1,6 +1,5 @@
 import { Section, SectionHeader } from "@/components/section";
 import { ReelShowcase } from "@/components/reel-showcase";
-import { TopReels } from "@/components/top-reels";
 
 export function Work() {
   return (
@@ -12,7 +11,6 @@ export function Work() {
       />
 
       <ReelShowcase />
-      <TopReels />
     </Section>
   );
 }
