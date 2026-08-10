@@ -10,24 +10,15 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 -top-40 h-[520px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(124,58,237,0.16),transparent_70%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28">
-        <div className="mb-8 flex items-center gap-3.5">
-          <Image
-            src="/img/kerim-portrait.jpg"
-            alt="Kerim Quintino"
-            width={240}
-            height={240}
-            priority
-            className="h-12 w-12 rounded-full border border-border object-cover"
-          />
-          <div>
-            <p className="text-[15px] font-medium leading-tight">
-              Kerim Quintino
-            </p>
-            <p className="text-sm text-muted-foreground">
-              Social Media Manager, kein Agenturteam
-            </p>
-          </div>
-        </div>
+        {/* Name steht schon im Header, hier reicht das Gesicht. */}
+        <Image
+          src="/img/kerim-portrait.jpg"
+          alt="Kerim Quintino"
+          width={240}
+          height={240}
+          priority
+          className="mb-8 h-14 w-14 rounded-full border border-border object-cover"
+        />
 
         <h1 className="display max-w-3xl text-[40px] sm:text-6xl lg:text-7xl">
           {/* Fester Umbruch, damit der zweite Satz nicht zerrissen wird. */}
