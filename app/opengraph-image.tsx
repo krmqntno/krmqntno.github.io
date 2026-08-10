@@ -46,7 +46,7 @@ export default function OpengraphImage() {
             maxWidth: 900,
           }}
         >
-          Dein Kanal soll Kunden bringen. Nicht Likes.
+          Menschen kaufen von Menschen. Nicht von Logos.
         </div>
 
         <div
@@ -57,8 +57,8 @@ export default function OpengraphImage() {
             maxWidth: 860,
           }}
         >
-          Reels, Karussells, Skripte und der Funnel dahinter. Du drehst, ich
-          mache den Rest.
+          Ich baue keinen Firmenkanal, sondern dich. Skript, Schnitt, Grafiken
+          und Funnel kommen von mir.
         </div>
       </div>
     ),
