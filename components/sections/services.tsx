@@ -20,8 +20,8 @@ export function Services() {
     <Section id="leistungen">
       <SectionHeader
         eyebrow="Leistungen"
-        title="Dein Aufwand: sechs Stunden im Monat."
-        lead="Daraus wird ein voller Monat Content, vom Skript bis zur Anfrage in deinen DMs."
+        title="Wir bauen deine Personenmarke. Zusammen."
+        lead="Ich übernehme Skript, Schnitt, Grafiken, Captions und den Funnel. Du bringst dein Gesicht, dein Wissen und die Zeit, es zu zeigen."
       />
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2">

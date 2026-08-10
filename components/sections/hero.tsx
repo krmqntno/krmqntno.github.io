@@ -35,13 +35,13 @@ export function Hero() {
         </div>
 
         <h1 className="display max-w-3xl text-[40px] sm:text-6xl lg:text-7xl">
-          Dein Kanal soll Kunden bringen. Nicht Likes.
+          Deine Kunden kaufen nicht von deiner Firma. Von dir.
         </h1>
 
         <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          Du drehst ein bis zwei Mal im Monat. Daraus mache ich einen ganzen
-          Monat Content, vom Skript über den Schnitt bis zum Funnel, der dir die
-          Anfragen bringt.
+          Deshalb baue ich keinen Firmenkanal, sondern dich. Skript, Schnitt,
+          Grafiken und Funnel kommen von mir. Du lernst dabei, wie Content
+          wirklich läuft.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">

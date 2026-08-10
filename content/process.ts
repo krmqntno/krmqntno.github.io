@@ -8,7 +8,7 @@ export const process: Step[] = [
   {
     step: "01",
     title: "Erstgespräch",
-    body: "30 Minuten. Ich schaue mir dein Profil vorher an und sage dir ehrlich, ob ich der Richtige für dich bin.",
+    body: "30 Minuten. Ich schaue mir dein Profil vorher an und sage dir ehrlich, ob ich der Richtige für dich bin und ob du bereit bist, dich zu zeigen.",
   },
   {
     step: "02",
@@ -18,7 +18,7 @@ export const process: Step[] = [
   {
     step: "03",
     title: "Produktion",
-    body: "Du drehst nach meinem Skript, bei größeren Terminen komme ich mit der Kamera. Ich schneide, texte und plane ein.",
+    body: "Du drehst nach meinem Skript, machst deine Storys selbst und filmst nebenbei kurze Clips aus deinem Alltag. Ich schneide, texte, plane ein und zeige dir dabei, warum welcher Hook funktioniert.",
   },
   {
     step: "04",

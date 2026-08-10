@@ -33,13 +33,22 @@ export function About() {
               welches gerade anfängt zu ziehen.
             </p>
             <p>
-              Genau das musst du dir nicht aneignen. Nicht wie ein Hook
+              Genau das musst du dir nicht draufschaffen. Nicht wie ein Hook
               aufgebaut ist, nicht warum Leute in Sekunde drei wegwischen, nicht
-              welche Hebel im Feed wirken. Dafür hast du mich.
+              welche Hebel im Feed wirken. Dafür hast du mich, und weil wir
+              jeden Monat zusammen durch die Zahlen gehen, bekommst du es
+              nebenbei mit.
             </p>
             <p>
-              Du bringst dein Fachwissen und dein Ziel mit. Ich bringe das
-              Handwerk. Gearbeitet wird an deinen Zielen, nicht an meinen.
+              Was ich dir nicht abnehmen kann, ist der Teil, für den es dich
+              braucht. Vor der Kamera stehst du, deine Storys macht niemand für
+              dich. Wer 2026 gar nichts tun will, wird auch mit dem besten
+              Schnitt nicht sichtbar.
+            </p>
+            <p>
+              Du bringst dein Fachwissen, dein Gesicht und dein Ziel mit. Ich
+              bringe das Handwerk. Gearbeitet wird an deinen Zielen, nicht an
+              meinen.
             </p>
           </div>
         </div>

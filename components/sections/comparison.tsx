@@ -9,7 +9,7 @@ export function Comparison() {
       <SectionHeader
         eyebrow="Der Unterschied"
         title="Warum nicht einfach eine Agentur."
-        lead="Du hast Alternativen zu mir. Hier steht, woran sie in der Praxis scheitern."
+        lead="Andere versprechen dir sechs Stunden im Monat und ein fertiges Ergebnis. Das funktioniert 2026 nicht mehr. Hier steht, wie es stattdessen läuft."
       />
 
       <div className="mt-14 grid gap-4 lg:grid-cols-2">

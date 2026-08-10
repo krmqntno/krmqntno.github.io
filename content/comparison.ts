@@ -22,7 +22,7 @@ export const comparison = {
     points: [
       "Immer ich, vom Skript bis zum Upload",
       "Skript, Hook und Aufbau kommen von mir, du liest ab",
-      "Sechs Stunden im Monat, mehr brauche ich nicht von dir",
+      "Du lernst nebenbei, warum welcher Hook zieht",
       "Jeden Monat Reporting, was nicht funktioniert fliegt raus",
       "Ein Preis für den ganzen Kanal, kein Posten pro Clip",
     ],
