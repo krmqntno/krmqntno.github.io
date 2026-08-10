@@ -6,7 +6,7 @@ import { site } from "@/content/site";
 
 export function Contact() {
   return (
-    <Section id="kontakt" className="bg-background">
+    <Section id="kontakt">
       <div className="grid gap-10 lg:grid-cols-[1fr_minmax(0,620px)] lg:gap-16">
         <div className="max-w-md">
           <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.12em] text-primary">

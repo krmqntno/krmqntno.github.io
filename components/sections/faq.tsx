@@ -4,7 +4,7 @@ import { faq } from "@/content/faq";
 
 export function Faq() {
   return (
-    <Section id="fragen">
+    <Section id="fragen" className="bg-background">
       <SectionHeader eyebrow="Fragen" title="Was die meisten zuerst wissen wollen." />
 
       <div className="mt-12 max-w-3xl">
