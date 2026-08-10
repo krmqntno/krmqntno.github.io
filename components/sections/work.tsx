@@ -1,5 +1,6 @@
 import { Section, SectionHeader } from "@/components/section";
 import { ReelShowcase } from "@/components/reel-showcase";
+import { TopReels } from "@/components/top-reels";
 
 export function Work() {
   return (
@@ -7,10 +8,11 @@ export function Work() {
       <SectionHeader
         eyebrow="Arbeiten"
         title="Wisch dich durch."
-        lead="Jedes Reel hier ist von mir. Rechts steht, was es gebracht hat und warum es funktioniert hat."
+        lead="Jedes Reel hier ist von mir. Rechts steht, warum es so gebaut ist und nicht anders."
       />
 
       <ReelShowcase />
+      <TopReels />
     </Section>
   );
 }
