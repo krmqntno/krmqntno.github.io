@@ -55,7 +55,13 @@ export function ReelShowcase() {
         }}
         className="relative mx-auto w-full max-w-[340px] lg:mx-0"
       >
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-secondary shadow-[0_20px_60px_-20px_rgba(0,0,0,0.25)]">
+        <div
+          className={cn(
+            "relative flex items-center overflow-hidden rounded-3xl border border-border bg-secondary shadow-[0_20px_60px_-20px_rgba(0,0,0,0.25)]",
+            // Querformat bekommt denselben Rahmen, damit die Spalte nicht springt.
+            reel.aspect === "16:9" && "aspect-[9/16]"
+          )}
+        >
           <video
             key={reel.slug}
             ref={videoRef}
@@ -65,8 +71,17 @@ export function ReelShowcase() {
             loop
             playsInline
             preload="none"
-            aria-label={`${reel.title}, ${reel.format} für ${reel.client}`}
-            className="aspect-[9/16] w-full object-cover"
+            aria-label={
+              reel.client
+                ? `${reel.title}, ${reel.format} für ${reel.client}`
+                : `${reel.title}, ${reel.format}`
+            }
+            className={cn(
+              "w-full",
+              reel.aspect === "16:9"
+                ? "aspect-video object-contain"
+                : "aspect-[9/16] object-cover"
+            )}
             onClick={() => {
               const el = videoRef.current;
               if (!el) return;
@@ -156,15 +171,19 @@ export function ReelShowcase() {
         </h3>
 
         <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-[15px]">
-          <span className="font-medium">{reel.client}</span>
-          <a
-            href={`https://instagram.com/${reel.handle}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            @{reel.handle}
-          </a>
+          {reel.client ? (
+            <span className="font-medium">{reel.client}</span>
+          ) : null}
+          {reel.handle ? (
+            <a
+              href={`https://instagram.com/${reel.handle}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline"
+            >
+              @{reel.handle}
+            </a>
+          ) : null}
           <span className="rounded-full bg-secondary px-3 py-1 text-[13px] text-muted-foreground">
             {reel.format}
           </span>
