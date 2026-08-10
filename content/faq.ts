@@ -5,27 +5,35 @@ export type Faq = {
 
 export const faq: Faq[] = [
   {
-    q: "Was kostet die Zusammenarbeit?",
-    a: "Das hängt vom Umfang ab. Zwischen 15 und 60 Beiträgen im Monat ist alles möglich, und dazwischen liegen Welten. Die Zahl nenne ich dir im Erstgespräch, sobald ich weiß, was du wirklich brauchst.",
+    q: "Wie lange dauert es, bis Ergebnisse kommen?",
+    a: "Das kann dir niemand seriös versprechen, und wer eine Zahl nennt, verkauft dir etwas. Es hängt an deiner Nische, deinem Produkt, deinem Preis und daran, wie sichtbar du vorher warst. Ein Handwerksbetrieb mit Aufträgen für ein paar tausend Euro braucht ganz andere Zahlen als ein Berater mit einem Produkt für fünfstellige Beträge. Was ich sagen kann: die ersten Monate bauen das Fundament, die Anfragen kommen danach.",
   },
   {
-    q: "Bin ich an eine Laufzeit gebunden?",
-    a: "Die ersten drei Monate laufen fest, danach monatlich kündbar. Vorher passiert schlicht zu wenig, um seriös beurteilen zu können, ob es funktioniert.",
+    q: "Gehen meine Videos dann viral?",
+    a: "Darauf arbeite ich nicht hin. Ein Video mit fünf Millionen Aufrufen, das die falschen Leute erreicht, bringt dir keinen einzigen Kunden. Mir sind zehntausend Aufrufe bei genau deiner Zielgruppe lieber. Wir bauen Content, der in einen Funnel führt, nicht Content, der sich gut erzählen lässt.",
+  },
+  {
+    q: "Wie viel muss ich selbst machen?",
+    a: "Mehr, als dir andere versprechen. Ein bis zwei Drehtermine im Monat, deine Storys, ab und zu ein paar Sekunden Material aus deinem Alltag und zehn Minuten, in denen du mir erzählst, was in deiner Branche gerade passiert. Alles andere übernehme ich. Wer gar nichts tun will, wird auch mit dem besten Schnitt nicht sichtbar.",
   },
   {
     q: "Wer dreht die Videos?",
-    a: "In der Regel du selbst, nach meinem Skript, mit dem Handy. Wenn ein Termin oder ein Objekt es hergibt, drehe ich vor Ort.",
+    a: "Du, nach meinem Skript, meistens mit dem Handy. Bei größeren Terminen oder Objekten komme ich mit der Kamera dazu. Storys machst du immer selbst, dafür gibt es keinen Ersatz, weil dich sonst niemand als Person kennenlernt.",
   },
   {
     q: "Schreibst du die Skripte?",
-    a: "Ja. Recherche, Hook, Aufbau und Call to Action kommen von mir. Du liest ab und bleibst dabei du selbst.",
-  },
-  {
-    q: "Wie lange dauert es bis zu Ergebnissen?",
-    a: "Die ersten Reichweitensprünge sehe ich meist nach vier bis sechs Wochen. Anfragen über DM kommen typischerweise ab dem zweiten Monat.",
+    a: "Ja. Recherche, Hook, Aufbau und Call to Action kommen von mir. Das Fachwissen kommt trotzdem von dir, ich baue es nur so, dass jemand bis zum Ende zuschaut. Du liest ab und bleibst dabei du selbst.",
   },
   {
     q: "Musst du meine Branche kennen?",
     a: "Nein. Ich habe mit Immobilienmaklern, Finanzberatern, Content Creatoren und einem Anbieter für KI Schulungen gearbeitet. Das Fachwissen kommt immer vom Kunden, das Format kommt von mir. Im Onboarding hole ich mir alles, was ich dafür brauche.",
+  },
+  {
+    q: "Was kostet die Zusammenarbeit?",
+    a: "Das hängt vom Umfang ab. Zwischen 15 und 60 Beiträgen im Monat liegen Welten, dazu kommt, ob ich nur schneide oder den ganzen Kanal führe. Die Zahl nenne ich dir im Erstgespräch, sobald ich weiß, was du wirklich brauchst.",
+  },
+  {
+    q: "Bin ich an eine Laufzeit gebunden?",
+    a: "Die ersten drei Monate laufen fest, danach monatlich kündbar. Nicht um dich zu binden, sondern weil vorher niemand beurteilen kann, ob es funktioniert. Ein Kanal, der vier Wochen läuft, hat noch keine Daten, aus denen sich etwas lernen lässt.",
   },
 ];
