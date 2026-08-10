@@ -8,7 +8,7 @@ export function Work() {
     <Section id="arbeiten">
       <SectionHeader
         eyebrow="Arbeiten"
-        title="Fünf Kanäle, eine Nische."
+        title="Sechs Kanäle, eine Nische."
         lead="Alles hier ist durch meine Hände gegangen. Namen und Zahlen zeige ich nur mit Freigabe der Kunden."
       />
 

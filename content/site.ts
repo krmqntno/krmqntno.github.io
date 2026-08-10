@@ -20,12 +20,23 @@ export const nav = [
 ] as const;
 
 /**
- * TODO Kerim: Werte bestätigen oder korrigieren.
- * Die 984k stammen aus deinem Mende Profil (Reel "Mieter-Urteile").
+ * Nur Werte, die belegbar sind. Stand 10.08.2026, live von den Profilen.
+ *
+ * 159.000 = Summe der Follower auf allen sieben Kanälen:
+ * learn.finance_ 82.600 + _mertgueler 63.300 + robertschwagerus 4.515 +
+ * makerus_consulting 3.380 + derfinanzkobold 1.991 + einfachristopher 1.945 +
+ * menderesmazrekaj 1.265 = 158.996.
+ *
+ * 4,4 Mio = Summe der viralen Reels aus den Kundenprofilen:
+ * 984k + 865k + 727k + 674k + 564k + 438k + 112k = 4.364.000.
+ * Ausschließlich Spitzenposts, die echte Gesamtreichweite liegt darüber.
+ *
+ * TODO Kerim: sobald du Gesamtviews aus den Insights aller Kunden hast,
+ * ersetzen wir die 4,4 Mio durch die echte Zahl.
  */
 export const stats = [
-  { value: "5", label: "Kanäle in Betreuung" },
-  { value: "120+", label: "Beiträge pro Monat" },
-  { value: "984k", label: "Views bestes Reel" },
-  { value: "2024", label: "in der Nische seit" },
+  { value: "159.000", label: "Follower auf den Kanälen dahinter" },
+  { value: "4,4 Mio", label: "Views allein mit den Top Reels" },
+  { value: "120+", label: "Beiträge im Monat" },
+  { value: "7", label: "Kanäle betreut" },
 ] as const;
