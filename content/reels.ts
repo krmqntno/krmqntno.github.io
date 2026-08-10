@@ -40,6 +40,17 @@ export const reels: Reel[] = [
     why: "Aus einer Stunde Aufnahme wird ein Clip, der allein steht. Der Hook ist eine Geschichte, keine Kennzahl, und wer sie anfängt, will das Ende hören.",
   },
   {
+    // TODO Kerim: für wen war das? client und handle nachtragen.
+    slug: "bushido-meinung",
+    title: "Bushido ist der krasseste Rapper",
+    format: "Meinungsreel",
+    aspect: "9:16",
+    views: null,
+    likes: null,
+    comments: null,
+    why: "Eine steile These im ersten Bild, danach die Belege. Widerspruch ist hier kein Risiko, sondern der Grund, warum kommentiert wird.",
+  },
+  {
     slug: "mert-foodguide",
     client: "Mert Güler",
     handle: "_mertgueler",
