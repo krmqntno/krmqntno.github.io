@@ -18,7 +18,7 @@ export const faq: Faq[] = [
   },
   {
     q: "Wer dreht die Videos?",
-    a: "Du, nach meinem Skript, meistens mit dem Handy. Bei größeren Terminen oder Objekten komme ich mit der Kamera dazu. Storys machst du immer selbst, dafür gibt es keinen Ersatz, weil dich sonst niemand als Person kennenlernt.",
+    a: "Am Anfang komme ich dazu und drehe mit dir. Dabei zeigst du mir nicht nur dein Thema, ich zeige dir auch worauf es ankommt: Bildausschnitt, Licht, Ton und wie oft du ruhig neu ansetzen darfst. Danach schaffst du es allein mit dem Handy in zwanzig Minuten. Wenn ein Termin oder ein Objekt es hergibt, drehe ich weiter selbst. Nur deine Storys machst du immer allein, sonst lernt dich niemand als Person kennen.",
   },
   {
     q: "Schreibst du die Skripte?",
