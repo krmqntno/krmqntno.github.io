@@ -34,6 +34,6 @@ export const faq: Faq[] = [
   },
   {
     q: "Bin ich an eine Laufzeit gebunden?",
-    a: "Die ersten drei Monate laufen fest, danach monatlich kündbar. Nicht um dich zu binden, sondern weil vorher niemand beurteilen kann, ob es funktioniert. Ein Kanal, der vier Wochen läuft, hat noch keine Daten, aus denen sich etwas lernen lässt.",
+    a: "Vertraglich nicht. Rechnen solltest du trotzdem mit mindestens sechs Monaten. Social Media läuft auf lange Sicht, die ersten Monate gehen dafür drauf, deine Zielgruppe zu verstehen, Formate zu testen und herauszufinden, welche Themen bei genau deinen Leuten ziehen. Wer nach acht Wochen aussteigt, hat den Teil bezahlt, in dem gelernt wird, und den Teil verpasst, in dem es sich auszahlt.",
   },
 ];
