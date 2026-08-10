@@ -10,11 +10,6 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 -top-40 h-[520px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(124,58,237,0.16),transparent_70%)]"
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-28">
-        <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-1.5 text-[13px] text-muted-foreground">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-          Freie Kapazität ab dem nächsten Monat
-        </p>
-
         <div className="mb-8 flex items-center gap-3.5">
           <Image
             src="/img/kerim-portrait.jpg"
