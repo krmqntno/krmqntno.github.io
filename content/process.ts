@@ -13,16 +13,16 @@ export const process: Step[] = [
   {
     step: "02",
     title: "Onboarding",
-    body: "Nische, Zielgruppe, Tonalität, No Gos. Daraus entsteht dein Contentplan für den ersten Monat.",
+    body: "Ich frage dich nach Nische, Zielgruppe, Tonalität und No Gos. Daraus baue ich deinen Contentplan für den ersten Monat.",
   },
   {
     step: "03",
     title: "Produktion",
-    body: "Du drehst nach meinem Skript, bei Bedarf drehe ich vor Ort. Ich schneide, texte, plane ein und veröffentliche.",
+    body: "Du drehst nach meinem Skript, bei größeren Terminen komme ich mit der Kamera. Ich schneide, texte und plane ein.",
   },
   {
     step: "04",
     title: "Auswerten",
-    body: "Jeden Monat Reporting. Was funktioniert, kommt öfter. Was nicht funktioniert, fliegt raus.",
+    body: "Jeden Monat setze ich mich mit deinen Zahlen hin. Was funktioniert, kommt öfter. Was nicht funktioniert, fliegt raus.",
   },
 ];

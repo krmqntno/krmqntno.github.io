@@ -25,7 +25,7 @@ export function Services() {
       <SectionHeader
         eyebrow="Leistungen"
         title="Alles, was zwischen deiner Idee und dem fertigen Beitrag liegt."
-        lead="Du buchst nicht einzelne Videos, sondern einen Kanal, der jeden Monat läuft."
+        lead="Du buchst keine einzelnen Videos. Du buchst jemanden, der deinen Kanal jeden Monat am Laufen hält."
       />
 
       <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

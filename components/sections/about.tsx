@@ -27,22 +27,25 @@ export function About() {
 
           <div className="mt-6 flex flex-col gap-4 text-[17px] leading-relaxed text-muted-foreground">
             <p>
-              Ich heiße Kerim, bin selbstständiger Social Media Manager und
-              arbeite fast ausschließlich mit Beratern und Maklern aus Finanzen
-              und Immobilien. Rund 120 Beiträge im Monat gehen bei mir durch die
-              Hand, vom Skript bis zum fertigen Reel.
+              Ich heiße Kerim, bin selbstständig und mache Instagram für Berater
+              und Makler aus Finanzen und Immobilien. Rund 120 Beiträge im Monat
+              gehen durch meine Hände, vom Skript bis zum fertigen Reel.
+            </p>
+            <p>
+              Angefangen habe ich am Schnittplatz. Irgendwann war klar, dass der
+              beste Schnitt nichts rettet, wenn der Hook nicht sitzt und niemand
+              weiß, was er nach dem Video tun soll. Seitdem übernehme ich den
+              ganzen Weg.
             </p>
             <p>
               Ich habe mich bewusst auf eine Nische festgelegt. Ich weiß, welche
-              Hooks in diesem Feld funktionieren, welche Aussagen du besser
-              nicht triffst und ab wann ein Kanal Anfragen produziert statt nur
-              Likes.
+              Hooks hier ziehen, welche Aussagen du besser nicht triffst und ab
+              wann ein Kanal Anfragen produziert statt nur Likes.
             </p>
             <p>
-              Was du bei mir nicht bekommst: Reichweitenversprechen, große Worte
-              und Templates von der Stange. Was du bekommst: jemanden, der
-              deinen Kanal jeden Tag im Blick hat und dir sagt, wenn eine Idee
-              nichts taugt.
+              Ich verspreche dir keine Zahlen. Ich sage dir, wenn eine Idee
+              nichts taugt, und ich sage dir auch, wenn ich nicht der Richtige
+              für dich bin.
             </p>
           </div>
         </div>

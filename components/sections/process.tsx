@@ -7,7 +7,7 @@ export function Process() {
       <SectionHeader
         eyebrow="Ablauf"
         title="Vier Schritte, keine Überraschungen."
-        lead="Du weißt vorher, was passiert, wer was macht und wann du etwas siehst."
+        lead="Du weißt vorher, was passiert, wer was macht und wann du das erste Ergebnis siehst."
       />
 
       <ol className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">

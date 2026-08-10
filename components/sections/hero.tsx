@@ -14,14 +14,14 @@ export function Hero() {
           Freie Kapazität ab dem nächsten Monat
         </p>
 
-        <h1 className="display max-w-4xl text-[40px] sm:text-6xl lg:text-7xl">
-          Ich baue Instagram Kanäle in Finanzen und Immobilien.
+        <h1 className="display max-w-3xl text-[40px] sm:text-6xl lg:text-7xl">
+          Dein Kanal soll Termine bringen. Nicht Likes.
         </h1>
 
         <p className="mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-          Reels, Karussells, Skripte und Community für Berater und Makler im
-          deutschsprachigen Raum. Du stehst vor der Kamera. Den Rest übernehme
-          ich.
+          Du drehst ein bis zwei Mal im Monat. Daraus mache ich einen ganzen
+          Monat Content, vom Skript über den Schnitt bis zum Funnel, der dir die
+          Anfragen bringt.
         </p>
 
         <div className="mt-10 flex flex-col gap-3 sm:flex-row">

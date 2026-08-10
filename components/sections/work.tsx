@@ -9,7 +9,7 @@ export function Work() {
       <SectionHeader
         eyebrow="Arbeiten"
         title="Fünf Kanäle, eine Nische."
-        lead="Alles hier läuft oder lief über meinen Schreibtisch. Namen und Zahlen mit Freigabe der Kunden."
+        lead="Alles hier ist durch meine Hände gegangen. Namen und Zahlen zeige ich nur mit Freigabe der Kunden."
       />
 
       <div className="mt-14 flex flex-col gap-4">
