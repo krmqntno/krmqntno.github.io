@@ -22,30 +22,24 @@ export function About() {
             Über mich
           </p>
           <h2 className="display text-3xl sm:text-4xl">
-            Ich bin kein Agenturteam. Du bekommst mich.
+            Du musst nicht verstehen, was gerade funktioniert.
           </h2>
 
           <div className="mt-6 flex flex-col gap-4 text-[17px] leading-relaxed text-muted-foreground">
             <p>
-              Ich heiße Kerim, bin selbstständig und mache Instagram für Berater
-              und Makler aus Finanzen und Immobilien. Rund 120 Beiträge im Monat
-              gehen durch meine Hände, vom Skript bis zum fertigen Reel.
+              Ich bin jung und mit Instagram groß geworden. Was dort läuft, sehe
+              ich jeden Tag selbst, nicht als Recherche, sondern weil es mein
+              Alltag ist. Ich merke Wochen vorher, welches Format kippt und
+              welches gerade anfängt zu ziehen.
             </p>
             <p>
-              Angefangen habe ich am Schnittplatz. Irgendwann war klar, dass der
-              beste Schnitt nichts rettet, wenn der Hook nicht sitzt und niemand
-              weiß, was er nach dem Video tun soll. Seitdem übernehme ich den
-              ganzen Weg.
+              Genau das musst du dir nicht aneignen. Nicht wie ein Hook
+              aufgebaut ist, nicht warum Leute in Sekunde drei wegwischen, nicht
+              welche Hebel im Feed wirken. Dafür hast du mich.
             </p>
             <p>
-              Ich habe mich bewusst auf eine Nische festgelegt. Ich weiß, welche
-              Hooks hier ziehen, welche Aussagen du besser nicht triffst und ab
-              wann ein Kanal Anfragen produziert statt nur Likes.
-            </p>
-            <p>
-              Ich verspreche dir keine Zahlen. Ich sage dir, wenn eine Idee
-              nichts taugt, und ich sage dir auch, wenn ich nicht der Richtige
-              für dich bin.
+              Du bringst dein Fachwissen und dein Ziel mit. Ich bringe das
+              Handwerk. Gearbeitet wird an deinen Zielen, nicht an meinen.
             </p>
           </div>
         </div>
