@@ -110,6 +110,18 @@ export const reels: Reel[] = [
     why: "Gleicher Aufbau, andere Person, anderes Thema. Serien machen einen Kanal wiedererkennbar, lange bevor die Followerzahl es tut.",
   },
   {
+    slug: "mert-foodguide",
+    client: "Mert Güler",
+    handle: "_mertgueler",
+    title: "Die krassesten Foodspots in Düsseldorf",
+    format: "Foodguide",
+    aspect: "9:16",
+    views: null,
+    likes: null,
+    comments: null,
+    why: "Weit weg von Finanzen und trotzdem dasselbe Handwerk. Ein Ort, ein Versprechen, ein Bild, das hungrig macht, bevor das erste Wort fällt.",
+  },
+  {
     slug: "dayinlife",
     title: "Day in the Life",
     format: "Vlog im Querformat",
