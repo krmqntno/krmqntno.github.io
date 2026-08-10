@@ -1,5 +1,5 @@
 import { ArrowRight } from "lucide-react";
-import { stats } from "@/content/site";
+import { industries, stats } from "@/content/site";
 
 export function Hero() {
   return (
@@ -48,6 +48,22 @@ export function Hero() {
             </div>
           ))}
         </dl>
+
+        <div className="mt-12 flex flex-col gap-4 border-t border-border pt-8 sm:flex-row sm:items-center sm:gap-8">
+          <p className="text-sm text-muted-foreground sm:shrink-0">
+            Gearbeitet mit
+          </p>
+          <ul className="flex flex-wrap gap-x-3 gap-y-2">
+            {industries.map((i) => (
+              <li
+                key={i}
+                className="rounded-full border border-border px-4 py-1.5 text-[15px]"
+              >
+                {i}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -13,7 +13,7 @@ export function SiteFooter() {
               {site.name}
             </p>
             <p className="mt-1 text-sm text-muted-foreground">
-              {site.role} für {site.niche}
+              {site.role} für {site.audience}
             </p>
           </div>
 

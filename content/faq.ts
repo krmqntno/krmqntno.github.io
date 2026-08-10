@@ -25,7 +25,7 @@ export const faq: Faq[] = [
     a: "Die ersten Reichweitensprünge sehe ich meist nach vier bis sechs Wochen. Anfragen über DM kommen typischerweise ab dem zweiten Monat.",
   },
   {
-    q: "Arbeitest du auch außerhalb von Finanzen und Immobilien?",
-    a: "Selten. Ich kenne diese Nische, ihre Regeln und was dort zieht. In anderen Themen wäre ich nur Durchschnitt, und dafür lohnt sich dein Geld nicht.",
+    q: "Musst du meine Branche kennen?",
+    a: "Nein. Ich habe mit Immobilienmaklern, Finanzberatern, Content Creatoren und einem Anbieter für KI Schulungen gearbeitet. Das Fachwissen kommt immer vom Kunden, das Format kommt von mir. Im Onboarding hole ich mir alles, was ich dafür brauche.",
   },
 ];

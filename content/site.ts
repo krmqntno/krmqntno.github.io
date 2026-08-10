@@ -1,15 +1,26 @@
 export const site = {
   name: "Kerim Quintino",
   role: "Social Media Manager",
-  niche: "Finanzen, Immobilien und Vermögensaufbau",
+  audience: "Selbständige und Unternehmen",
   instagram: "kerimquintino",
   instagramUrl: "https://instagram.com/kerimquintino",
   email: "kerim.quintino@gmail.com",
   // TODO Kerim: sobald Domain steht, hier eintragen. Wird für Metadata und OG genutzt.
   url: "https://kerimquintino.vercel.app",
   description:
-    "Ich baue Instagram Kanäle für Berater und Makler in Finanzen und Immobilien. Reels, Karussells, Skripte, Community.",
+    "Ich mache Instagram für Selbständige und Unternehmen. Reels, Karussells, Skripte, Community und der Funnel dahinter.",
 } as const;
+
+/**
+ * Die Branchen, in denen Kerim bisher gearbeitet hat.
+ * TODO Kerim: ergänzen oder streichen, wenn etwas fehlt oder zu dünn ist.
+ */
+export const industries = [
+  "Immobilienmakler",
+  "Finanzberatung",
+  "Content Creator",
+  "Bildung und KI",
+] as const;
 
 export const nav = [
   { label: "Leistungen", href: "#leistungen" },

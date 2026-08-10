@@ -7,7 +7,7 @@ import { site } from "@/content/site";
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} · ${site.role} für ${site.niche}`,
+    default: `${site.name} · ${site.role} für ${site.audience}`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
