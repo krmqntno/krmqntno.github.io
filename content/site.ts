@@ -5,6 +5,9 @@ export const site = {
   instagram: "kerimquintino",
   instagramUrl: "https://instagram.com/kerimquintino",
   email: "kerim.quintino@gmail.com",
+  // Direkt der Termintyp, nicht die Uebersicht. Sonst muss der Besucher
+  // erst „30 Minute Meeting" anklicken, bevor der Kalender erscheint.
+  calendlyUrl: "https://calendly.com/kerim-quintino-bwj8/30min",
   // TODO Kerim: sobald Domain steht, hier eintragen. Wird für Metadata und OG genutzt.
   url: "https://kerimquintino.vercel.app",
   description:
@@ -25,7 +28,6 @@ export const industries = [
 export const nav = [
   { label: "Leistungen", href: "#leistungen" },
   { label: "Ablauf", href: "#ablauf" },
-  { label: "Arbeiten", href: "#arbeiten" },
   { label: "Über mich", href: "#ueber-mich" },
   { label: "Fragen", href: "#fragen" },
 ] as const;
@@ -45,9 +47,19 @@ export const nav = [
  * TODO Kerim: sobald du Gesamtviews aus den Insights aller Kunden hast,
  * ersetzen wir die 4,4 Mio durch die echte Zahl.
  */
+/**
+ * `to` und `decimals` steuern den Zähler im Hero, `suffix` haengt hinten dran
+ * und zaehlt nicht mit. `value` bleibt als Fallback ohne JavaScript.
+ */
 export const stats = [
-  { value: "159.000", label: "Follower auf den Kanälen dahinter" },
-  { value: "4,4 Mio", label: "Views allein mit den Top Reels" },
-  { value: "120+", label: "Beiträge im Monat" },
-  { value: "7", label: "Kanäle betreut" },
+  { value: "159.000", to: 159000, label: "Follower auf den Kanälen dahinter" },
+  {
+    value: "4,4 Mio",
+    to: 4.4,
+    decimals: 1,
+    suffix: " Mio",
+    label: "Views allein mit den Top Reels",
+  },
+  { value: "120+", to: 120, suffix: "+", label: "Beiträge im Monat" },
+  { value: "7", to: 7, label: "Kanäle betreut" },
 ] as const;

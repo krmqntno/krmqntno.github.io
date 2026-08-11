@@ -34,7 +34,7 @@ export function ProcessScroller() {
     <div className="mt-14 grid gap-10 lg:grid-cols-[minmax(0,300px)_1fr] lg:gap-20">
       {/* Fortschrittsleiste, klebt auf Desktop */}
       <div className="hidden lg:block">
-        <div className="sticky top-32">
+        <div className="sticky top-28">
           <p className="text-sm text-muted-foreground">
             Schritt {active + 1} von {process.length}
           </p>
@@ -70,7 +70,7 @@ export function ProcessScroller() {
       </div>
 
       {/* Die Schritte selbst */}
-      <ol className="flex flex-col gap-6 lg:gap-0">
+      <ol className="flex flex-col gap-5 lg:gap-0">
         {process.map((p, i) => (
           <li
             key={p.step}
@@ -78,7 +78,7 @@ export function ProcessScroller() {
               refs.current[i] = el;
             }}
             className={cn(
-              "transition-opacity duration-500 lg:flex lg:min-h-[62vh] lg:flex-col lg:justify-center",
+              "transition-opacity duration-500 lg:flex lg:min-h-[44vh] lg:flex-col lg:justify-center",
               i === active ? "opacity-100" : "lg:opacity-35"
             )}
           >

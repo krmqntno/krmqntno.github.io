@@ -69,17 +69,24 @@ html {
 body {
   background-color: var(--page);
   color: var(--foreground);
-  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+  font-family: var(--font-sub), -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Tight, Apple-like display type for headlines */
+/* Retro-Serif fuer alle Ueberschriften und Zahlen. SOFT rundet die Ecken,
+   WONK macht die Schraegen krumm, opsz treibt den Kontrast hoch. Zusammen
+   ergibt das die bauchige Siebziger-Anmutung aus Kerims Vorlage. */
 .display {
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  font-weight: 600;
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-variation-settings:
+    "SOFT" 100,
+    "WONK" 1,
+    "opsz" 144;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -3,15 +3,12 @@ export type Faq = {
   a: string;
 };
 
+/**
+ * Bewusst nur fuenf Fragen: die, die vor einer Anfrage wirklich im Weg stehen.
+ * Raus sind „Gehen meine Videos viral", „Schreibst du die Skripte" und
+ * „Wie lange dauert es". Letzteres steckt jetzt in der Antwort zur Laufzeit.
+ */
 export const faq: Faq[] = [
-  {
-    q: "Wie lange dauert es, bis Ergebnisse kommen?",
-    a: "Das kann dir niemand seriös versprechen, und wer eine Zahl nennt, verkauft dir etwas. Es hängt an deiner Nische, deinem Produkt, deinem Preis und daran, wie sichtbar du vorher warst. Ein Handwerksbetrieb mit Aufträgen für ein paar tausend Euro braucht ganz andere Zahlen als ein Berater mit einem Produkt für fünfstellige Beträge. Was ich sagen kann: die ersten Monate bauen das Fundament, die Anfragen kommen danach.",
-  },
-  {
-    q: "Gehen meine Videos dann viral?",
-    a: "Darauf arbeite ich nicht hin. Ein Video mit fünf Millionen Aufrufen, das die falschen Leute erreicht, bringt dir keinen einzigen Kunden. Mir sind zehntausend Aufrufe bei genau deiner Zielgruppe lieber. Wir bauen Content, der in einen Funnel führt, nicht Content, der sich gut erzählen lässt.",
-  },
   {
     q: "Wie viel muss ich selbst machen?",
     a: "Mehr, als dir andere versprechen. Ein bis zwei Drehtermine im Monat, deine Storys, ab und zu ein paar Sekunden Material aus deinem Alltag und zehn Minuten, in denen du mir erzählst, was in deiner Branche gerade passiert. Alles andere übernehme ich. Wer gar nichts tun will, wird auch mit dem besten Schnitt nicht sichtbar.",
@@ -19,10 +16,6 @@ export const faq: Faq[] = [
   {
     q: "Wer dreht die Videos?",
     a: "Am Anfang komme ich dazu und drehe mit dir. Dabei zeigst du mir nicht nur dein Thema, ich zeige dir auch worauf es ankommt: Bildausschnitt, Licht, Ton und wie oft du ruhig neu ansetzen darfst. Danach schaffst du es allein mit dem Handy in zwanzig Minuten. Wenn ein Termin oder ein Objekt es hergibt, drehe ich weiter selbst. Nur deine Storys machst du immer allein, sonst lernt dich niemand als Person kennen.",
-  },
-  {
-    q: "Schreibst du die Skripte?",
-    a: "Ja. Recherche, Hook, Aufbau und Call to Action kommen von mir. Das Fachwissen kommt trotzdem von dir, ich baue es nur so, dass jemand bis zum Ende zuschaut. Du liest ab und bleibst dabei du selbst.",
   },
   {
     q: "Musst du meine Branche kennen?",
@@ -34,6 +27,6 @@ export const faq: Faq[] = [
   },
   {
     q: "Bin ich an eine Laufzeit gebunden?",
-    a: "Vertraglich nicht. Rechnen solltest du trotzdem mit mindestens sechs Monaten. Social Media läuft auf lange Sicht, die ersten Monate gehen dafür drauf, deine Zielgruppe zu verstehen, Formate zu testen und herauszufinden, welche Themen bei genau deinen Leuten ziehen. Wer nach acht Wochen aussteigt, hat den Teil bezahlt, in dem gelernt wird, und den Teil verpasst, in dem es sich auszahlt.",
+    a: "Vertraglich nicht. Rechnen solltest du trotzdem mit mindestens sechs Monaten. Wann die ersten Anfragen kommen, kann dir niemand seriös versprechen, das hängt an deiner Nische, deinem Preis und daran, wie sichtbar du vorher warst. Die ersten Monate gehen dafür drauf, deine Zielgruppe zu verstehen, Formate zu testen und herauszufinden, welche Themen bei genau deinen Leuten ziehen. Wer nach acht Wochen aussteigt, hat den Teil bezahlt, in dem gelernt wird, und den Teil verpasst, in dem es sich auszahlt.",
   },
 ];

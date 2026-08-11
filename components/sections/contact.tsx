@@ -1,14 +1,14 @@
 import { Mail } from "lucide-react";
 import { InstagramIcon } from "@/components/icons";
 import { Section } from "@/components/section";
-import { ContactForm } from "@/components/contact-form";
+import { CalendlyEmbed } from "@/components/calendly-embed";
 import { site } from "@/content/site";
 
 export function Contact() {
   return (
     <Section id="kontakt">
-      <div className="grid gap-10 lg:grid-cols-[1fr_minmax(0,620px)] lg:gap-16">
-        <div className="max-w-md">
+      <div className="flex flex-col gap-10">
+        <div className="max-w-2xl">
           <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.12em] text-primary">
             Kontakt
           </p>
@@ -19,27 +19,29 @@ export function Contact() {
             Ich schaue mir dein Profil an und sage dir im Erstgespräch ehrlich,
             ob und wie ich dir helfen kann. Auch wenn die Antwort nein lautet.
           </p>
-
-          <div className="mt-8 flex flex-col gap-3 text-[15px]">
-            <a
-              href={site.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <InstagramIcon size={17} />@{site.instagram}
-            </a>
-            <a
-              href={`mailto:${site.email}`}
-              className="inline-flex items-center gap-2.5 text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <Mail size={17} />
-              {site.email}
-            </a>
-          </div>
         </div>
 
-        <ContactForm />
+        <CalendlyEmbed />
+
+        {/* Ausweg fuer alle, die lieber erst schreiben. */}
+        <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-border pt-6 text-[15px]">
+          <span className="text-muted-foreground">Lieber erst schreiben?</span>
+          <a
+            href={site.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <InstagramIcon size={17} />@{site.instagram}
+          </a>
+          <a
+            href={`mailto:${site.email}`}
+            className="inline-flex items-center gap-2.5 text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <Mail size={17} />
+            {site.email}
+          </a>
+        </div>
       </div>
     </Section>
   );
