@@ -7,9 +7,13 @@ export const metadata: Metadata = {
 };
 
 /**
- * TODO Kerim: Pflichtangaben nach § 5 DDG.
- * Ohne ladungsfähige Anschrift ist die Seite abmahnfähig.
- * Ersetze alle Platzhalter in eckigen Klammern, bevor die Seite live geht.
+ * Pflichtangaben nach § 5 DDG. Anschrift steht seit 13.08.2026 drin, sie
+ * kommt aus `content/site.ts` und wird von der Datenschutzerklaerung
+ * mitbenutzt.
+ *
+ * Eine Telefonnummer steht bewusst nicht hier. Nach der Rechtsprechung des
+ * EuGH reicht ein zweiter schneller Kanal, die Mailadresse erfuellt das.
+ * TODO Kerim: wenn du doch eine Nummer angeben willst, sag Bescheid.
  */
 export default function Impressum() {
   return (
@@ -22,20 +26,20 @@ export default function Impressum() {
           <p className="text-muted-foreground">
             Kerim Quintino
             <br />
-            [Straße und Hausnummer]
+            {site.street}
             <br />
-            [PLZ Ort]
+            {site.city}
             <br />
-            Deutschland
+            {site.country}
           </p>
         </section>
 
         <section>
           <h2 className="mb-2 font-semibold">Kontakt</h2>
           <p className="text-muted-foreground">
-            Telefon: [Telefonnummer]
-            <br />
             E Mail: {site.email}
+            <br />
+            Instagram: @{site.instagram}
           </p>
         </section>
 
@@ -61,6 +65,17 @@ export default function Impressum() {
             Ich bin nicht bereit und nicht verpflichtet, an
             Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
             teilzunehmen.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="mb-2 font-semibold">Haftung für Links</h2>
+          <p className="text-muted-foreground">
+            Diese Seite verlinkt auf Instagram und auf Calendly. Für die Inhalte
+            dieser Seiten sind allein deren Betreiber verantwortlich. Zum
+            Zeitpunkt der Verlinkung war dort nichts Rechtswidriges erkennbar.
+            Wenn dir dort etwas auffällt, schreib mir und ich nehme den Link
+            raus.
           </p>
         </section>
 

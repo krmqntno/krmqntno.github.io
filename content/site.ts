@@ -5,6 +5,11 @@ export const site = {
   instagram: "kerimquintino",
   instagramUrl: "https://instagram.com/kerimquintino",
   email: "kerim.quintino@gmail.com",
+  // Ladungsfaehige Anschrift, Pflicht nach § 5 DDG. Steht im Impressum und
+  // als Verantwortlicher in der Datenschutzerklaerung, deshalb nur hier.
+  street: "Kaltenauer Weg 66",
+  city: "59063 Hamm",
+  country: "Deutschland",
   // Direkt der Termintyp, nicht die Uebersicht. Sonst muss der Besucher
   // erst „30 Minute Meeting" anklicken, bevor der Kalender erscheint.
   calendlyUrl: "https://calendly.com/kerim-quintino-bwj8/30min",
