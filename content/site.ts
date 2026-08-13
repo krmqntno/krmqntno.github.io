@@ -7,7 +7,7 @@ export const site = {
   email: "kerim.quintino@gmail.com",
   // Ladungsfaehige Anschrift, Pflicht nach § 5 DDG. Steht im Impressum und
   // als Verantwortlicher in der Datenschutzerklaerung, deshalb nur hier.
-  street: "Kaltenauer Weg 66",
+  street: "Caldenhofer Weg 66",
   city: "59063 Hamm",
   country: "Deutschland",
   // Direkt der Termintyp, nicht die Uebersicht. Sonst muss der Besucher
