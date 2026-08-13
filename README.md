@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# kerim-site
 
-## Getting Started
+Öffentliche Seite von Kerim Quintino, Social Media Manager für Selbständige und Unternehmen. Next.js 16 App Router, React 19, Tailwind 4, TypeScript, pnpm.
 
-First, run the development server:
+## Loslegen
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+pnpm dev          # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Vor jedem Commit:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npx tsc --noEmit
+npx eslint app/ components/ content/
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Wo was liegt
 
-## Learn More
+| Ordner | Inhalt |
+| --- | --- |
+| `app/` | Seiten, Layout, Metadaten, `robots.ts`, `sitemap.ts` |
+| `components/` | Bausteine, `sections/` sind die Blöcke der Startseite |
+| `content/` | Alle Texte und Zahlen. Hier wird gepflegt, nicht in den Komponenten |
+| `public/proof/` | Screenshots aus den Instagram Insights |
 
-To learn more about Next.js, take a look at the following resources:
+`content/site.ts` ist die eine Stelle für Name, Adresse, Mailadresse, Calendly Link, Domain und die Zahlen im Hero.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Datenschutz
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Die Seite ist absichtlich schlank gebaut:
 
-## Deploy on Vercel
+- **Keine eigenen Cookies, kein localStorage, kein Analytics, kein Pixel.**
+- **Schriften liegen lokal.** Fraunces und Space Grotesk kommen über `next/font/google`, das lädt sie beim Bauen herunter und liefert sie vom eigenen Server aus. Keine Verbindung zu Google beim Seitenaufruf.
+- **Calendly lädt erst nach einem Klick.** `components/calendly-embed.tsx` rendert vorher nur eine Karte, der iframe hängt gar nicht im Baum. Das ist die Einwilligung nach § 25 Abs. 1 TDDG. Sie wird bewusst nirgends gespeichert, damit die Aussage in der Datenschutzerklärung stimmt.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Wenn du daran etwas änderst, muss `app/datenschutz/page.tsx` mit.** Analytics oder ein Pixel einzubauen bedeutet ein echtes Consent Banner, die Zwei Klick Lösung reicht dann nicht mehr.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+So prüfst du, dass nichts ungefragt lädt: DevTools, Netzwerk, Filter `calendly`, Seite neu laden und bis zur Kontaktsektion scrollen. Es darf kein einziger Request auftauchen, bevor du auf „Kalender laden" klickst.
+
+## Vor dem Livegang
+
+- [ ] Domain kaufen und in `content/site.ts` bei `url` eintragen. Canonical, OG Bild und Sitemap ziehen automatisch mit
+- [ ] Vercel Projekt anlegen und deployen
+- [ ] Bei Vercel den Auftragsverarbeitungsvertrag akzeptieren (Settings, Legal). Die Datenschutzerklärung behauptet, dass er besteht
+- [ ] **Vercel Analytics und Speed Insights ausgeschaltet lassen**
+- [ ] Bei Calendly den DPA akzeptieren, den Termin umbenennen und die Oberfläche auf Deutsch stellen
+- [ ] Datenschutzerklärung von jemandem mit Rechtskenntnis gegenlesen lassen
