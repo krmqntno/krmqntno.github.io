@@ -40,12 +40,13 @@ export const nav = [
  * makerus_consulting 3.380 + derfinanzkobold 1.991 + einfachristopher 1.945 +
  * menderesmazrekaj 1.265 = 158.996.
  *
- * 4,4 Mio = Summe der viralen Reels aus den Kundenprofilen:
- * 984k + 865k + 727k + 674k + 564k + 438k + 112k = 4.364.000.
- * Ausschließlich Spitzenposts, die echte Gesamtreichweite liegt darüber.
+ * 8,9 Mio = Summe der elf Reels, die im Slider unter #ergebnisse mit
+ * Screenshot belegt sind: 8.911.798 Aufrufe. Die Zahl wird in
+ * `components/proof-wall.tsx` aus `content/proof.ts` neu gerechnet, hier steht
+ * sie nur als Text. Wenn du Folien ergänzt oder streichst, beide Stellen
+ * angleichen, sonst widerspricht der Hero dem Slider.
  *
- * TODO Kerim: sobald du Gesamtviews aus den Insights aller Kunden hast,
- * ersetzen wir die 4,4 Mio durch die echte Zahl.
+ * Ausschließlich Spitzenposts, die echte Gesamtreichweite liegt darüber.
  */
 /**
  * `to` und `decimals` steuern den Zähler im Hero, `suffix` haengt hinten dran
@@ -54,11 +55,11 @@ export const nav = [
 export const stats = [
   { value: "159.000", to: 159000, label: "Follower auf den Kanälen dahinter" },
   {
-    value: "4,4 Mio",
-    to: 4.4,
+    value: "8,9 Mio",
+    to: 8.9,
     decimals: 1,
     suffix: " Mio",
-    label: "Views allein mit den Top Reels",
+    label: "Aufrufe, jedes Reel mit Screenshot belegt",
   },
   { value: "120+", to: 120, suffix: "+", label: "Beiträge im Monat" },
   { value: "7", to: 7, label: "Kanäle betreut" },

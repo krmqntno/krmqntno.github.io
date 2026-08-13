@@ -8,18 +8,6 @@ import { cn } from "@/lib/utils";
 import { proofReels, type ProofReel } from "@/content/proof";
 
 const de = new Intl.NumberFormat("de-DE");
-const deOne = new Intl.NumberFormat("de-DE", {
-  minimumFractionDigits: 1,
-  maximumFractionDigits: 1,
-});
-
-/** Grosse Zahlen kurz, kleine ausgeschrieben. */
-function short(n: number) {
-  if (n >= 1_000_000) return `${deOne.format(n / 1_000_000)} Mio`;
-  return de.format(n);
-}
-
-const totalViews = proofReels.reduce((sum, r) => sum + r.views, 0);
 
 export function ProofWall() {
   const scroller = useRef<HTMLDivElement>(null);
@@ -77,7 +65,7 @@ export function ProofWall() {
   return (
     <div id="ergebnisse" className="mt-14 scroll-mt-24 border-t border-border pt-10">
       <h3 className="display max-w-2xl text-2xl sm:text-3xl">
-        Fünf Reels, {short(totalViews)} Aufrufe.
+        Irgendwann ist das dein Screenshot.
       </h3>
       <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,300px)_1fr] lg:items-center lg:gap-14">
         {/* Zahlen zur aktuellen Folie, zaehlen bei jedem Wechsel neu hoch */}
@@ -112,6 +100,11 @@ export function ProofWall() {
                 im Schnitt gesehen
               </dd>
             </div>
+            {/*
+              Erreichte Konten stehen bewusst nicht hier. Die Zahl ist im
+              Screenshot zu sehen, doppelt braucht sie niemand, und sie gibt
+              es nur bei den neueren Folien.
+            */}
           </dl>
 
           <div className="mt-8 flex items-center gap-3">
