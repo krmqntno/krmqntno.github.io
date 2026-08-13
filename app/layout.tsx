@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     template: `%s · ${site.name}`,
   },
   description: site.description,
+  // Ohne diese Zeile setzt Next gar kein Canonical. Sobald die eigene Domain
+  // steht, ist die Seite sonst zweimal erreichbar, hier und bei vercel.app,
+  // und Google muss raten, welche gilt.
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     locale: "de_DE",
