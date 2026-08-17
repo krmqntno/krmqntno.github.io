@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 #
 # Baut die Seite als statischen Export und schiebt das Ergebnis in den Branch
-# gh-pages, aus dem GitHub Pages ausliefert. Aufruf: pnpm deploy
+# gh-pages, aus dem GitHub Pages ausliefert. Aufruf: pnpm pages
+#
+# Nicht „deploy" nennen, das ist ein eingebauter pnpm-Befehl und schlaegt mit
+# ERR_PNPM_NOTHING_TO_DEPLOY fehl.
 #
 # Der Branch enthaelt nur die fertigen Dateien, nie den Quelltext. main bleibt
 # davon unberuehrt.
