@@ -5,6 +5,9 @@ export const alt = `${site.name}, ${site.role} für ${site.audience}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+// Beim statischen Export muss das Bild zur Bauzeit entstehen, nicht auf Abruf.
+export const dynamic = "force-static";
+
 /**
  * Vorschaubild für WhatsApp, Instagram DMs und alles andere, wo der Link
  * geteilt wird. Ohne das erscheint eine graue Box.

@@ -7,9 +7,17 @@ export const metadata: Metadata = {
 };
 
 /**
- * Stand 13.08.2026. Der Text beschreibt genau das, was die Seite tut:
- * Vercel als Hoster, Calendly erst nach Klick, Schriften lokal ausgeliefert,
- * keine eigenen Cookies, kein Analytics, kein Pixel, kein Kontaktformular.
+ * Stand 17.08.2026. Der Text beschreibt genau das, was die Seite tut:
+ * GitHub Pages als Hoster, Calendly erst nach Klick, Schriften lokal
+ * ausgeliefert, keine eigenen Cookies, kein Analytics, kein Pixel, kein
+ * Kontaktformular.
+ *
+ * OFFENER PUNKT, Kerim weiss davon: fuer ein kostenloses GitHub Konto gibt es
+ * keinen zugesicherten Auftragsverarbeitungsvertrag nach Art. 28 DSGVO.
+ * GitHubs DPA gilt Leistungen „under a written and executed agreement", also
+ * dem Customer Agreement, nicht den angeklickten Terms of Service. Deshalb
+ * behauptet dieser Text keinen AVV. Wer einen braucht, muss auf einen Hoster
+ * wechseln, der ihn im gewaehlten Tarif zusichert.
  *
  * Wenn sich daran etwas aendert, muss dieser Text mit. Besonders:
  * - Analytics, Pixel oder Vercel Speed Insights einbauen -> eigener Absatz
@@ -26,7 +34,7 @@ export default function Datenschutz() {
       <h1 className="display text-4xl">Datenschutzerklärung</h1>
 
       <p className="mt-4 text-sm text-muted-foreground">
-        Stand: 13. August 2026
+        Stand: 17. August 2026
       </p>
 
       <div className="mt-10 flex flex-col gap-8 text-[15px] leading-relaxed">
@@ -56,19 +64,19 @@ export default function Datenschutz() {
         <section>
           <h2 className="mb-2 font-semibold">Hosting und Serverdaten</h2>
           <p className="text-muted-foreground">
-            Diese Website wird bei der Vercel Inc., 340 S Lemon Ave #4133,
-            Walnut, CA 91789, USA gehostet. Mit Vercel besteht ein Vertrag zur
-            Auftragsverarbeitung nach Art. 28 DSGVO. Beim Aufruf der Seite
-            verarbeitet Vercel technisch notwendige Serverdaten, also deine IP
-            Adresse, den Zeitpunkt des Zugriffs, die aufgerufene Seite, die
-            übertragene Datenmenge und Angaben zu Browser und Betriebssystem.
-            Ohne diese Daten lässt sich die Seite nicht ausliefern.
-            Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO, mein berechtigtes
-            Interesse an einem sicheren und stabilen Betrieb. Die Logs löscht
-            Vercel automatisch nach Ablauf der dortigen Speicherfrist, ich
-            selbst werte sie nicht aus und führe sie mit nichts zusammen. Die
-            Übermittlung in die USA
-            stützt sich auf die Standardvertragsklauseln der EU Kommission.
+            Diese Website liegt als fertige Datei bei GitHub Pages, einem Dienst
+            der GitHub Inc., 88 Colin P Kelly Jr Street, San Francisco, CA
+            94107, USA. Beim Aufruf der Seite verarbeitet GitHub technisch
+            notwendige Serverdaten, also deine IP Adresse, den Zeitpunkt des
+            Zugriffs, die aufgerufene Seite, die übertragene Datenmenge und
+            Angaben zu Browser und Betriebssystem. Ohne diese Daten lässt sich
+            die Seite nicht ausliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f
+            DSGVO, mein berechtigtes Interesse an einem sicheren und stabilen
+            Betrieb. Ich selbst bekomme diese Logs nicht zu sehen, werte sie
+            nicht aus und führe sie mit nichts zusammen. Die Übermittlung in die
+            USA stützt sich darauf, dass GitHub Inc. unter dem EU US Data
+            Privacy Framework zertifiziert ist, für das die EU Kommission ein
+            angemessenes Schutzniveau festgestellt hat.
           </p>
         </section>
 

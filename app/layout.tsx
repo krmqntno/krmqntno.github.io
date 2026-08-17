@@ -30,9 +30,12 @@ export const metadata: Metadata = {
   },
   description: site.description,
   // Ohne diese Zeile setzt Next gar kein Canonical. Sobald die eigene Domain
-  // steht, ist die Seite sonst zweimal erreichbar, hier und bei vercel.app,
+  // steht, ist die Seite sonst zweimal erreichbar, hier und bei github.io,
   // und Google muss raten, welche gilt.
   alternates: { canonical: "/" },
+  // Ersatz fuer den Referrer-Policy-Header, den GitHub Pages nicht setzen kann.
+  // Siehe die Erklaerung in next.config.ts.
+  referrer: "strict-origin-when-cross-origin",
   openGraph: {
     type: "website",
     locale: "de_DE",
