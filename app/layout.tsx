@@ -43,6 +43,21 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} · ${site.role}`,
     description: site.description,
+    // Bewusst eine echte Datei statt der Route app/opengraph-image.tsx.
+    // GitHub Pages liefert Dateien ohne Endung als application/octet-stream
+    // aus, und WhatsApp, Instagram und LinkedIn zeigen dann keine Vorschau.
+    // Die Vorlage, aus der das Bild entstanden ist, liegt in
+    // scripts/opengraph-image.tsx.vorlage. Zum Neubauen dort zurueck nach
+    // app/ schieben, einmal bauen, out/opengraph-image als public/og.png
+    // speichern und die Datei wieder wegschieben.
+    images: [
+      {
+        url: "/og.png",
+        width: 1200,
+        height: 630,
+        alt: `${site.name}, ${site.role} für ${site.audience}`,
+      },
+    ],
   },
   robots: { index: true, follow: true },
 };
