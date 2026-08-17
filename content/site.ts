@@ -13,8 +13,9 @@ export const site = {
   // Direkt der Termintyp, nicht die Uebersicht. Sonst muss der Besucher
   // erst „30 Minute Meeting" anklicken, bevor der Kalender erscheint.
   calendlyUrl: "https://calendly.com/kerim-quintino-bwj8/30min",
-  // TODO Kerim: sobald Domain steht, hier eintragen. Wird für Metadata und OG genutzt.
-  url: "https://kerimquintino.vercel.app",
+  // TODO Kerim: sobald die eigene Domain steht, hier eintragen. Wird für Metadata,
+  // Canonical, OG und Sitemap genutzt.
+  url: "https://kerim-quintino.vercel.app",
   description:
     "Ich mache Instagram für Selbständige und Unternehmen. Reels, Karussells, Skripte, Community und der Funnel dahinter.",
 } as const;
