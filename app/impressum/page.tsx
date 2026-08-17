@@ -11,9 +11,19 @@ export const metadata: Metadata = {
  * kommt aus `content/site.ts` und wird von der Datenschutzerklaerung
  * mitbenutzt.
  *
- * Eine Telefonnummer steht bewusst nicht hier. Nach der Rechtsprechung des
- * EuGH reicht ein zweiter schneller Kanal, die Mailadresse erfuellt das.
+ * Eine Telefonnummer steht bewusst nicht hier. Nach EuGH C 298/07 muss neben
+ * der Mailadresse ein zweiter Weg fuer schnelle und unmittelbare
+ * Kommunikation offenstehen, eine Telefonnummer ist dafuer aber nicht
+ * vorgeschrieben. Diesen zweiten Weg deckt der Instagram Account ab.
  * TODO Kerim: wenn du doch eine Nummer angeben willst, sag Bescheid.
+ *
+ * ⚠️ NIEMALS die OS Plattform der EU verlinken. Die wurde am 20.07.2025
+ * abgeschaltet, die Verlinkungspflicht ist damit entfallen, und ein Link auf
+ * die tote Seite ist selbst abmahnfaehig.
+ *
+ * Der Satz zur Streitschlichtung bleibt trotzdem stehen. Nach § 36 Abs. 3
+ * VSBG ist er bei zehn oder weniger Beschaeftigten nicht Pflicht, er schadet
+ * aber nicht und beantwortet die Frage, bevor sie jemand stellt.
  */
 export default function Impressum() {
   return (
@@ -40,6 +50,11 @@ export default function Impressum() {
             E Mail: {site.email}
             <br />
             Instagram: @{site.instagram}
+          </p>
+          <p className="mt-3 text-muted-foreground">
+            Beide Wege führen direkt zu mir und ich antworte darauf werktags.
+            Eine Telefonnummer steht hier nicht, ein Telefonat vereinbaren wir
+            über einen der beiden Wege.
           </p>
         </section>
 
