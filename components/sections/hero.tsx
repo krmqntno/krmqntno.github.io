@@ -12,11 +12,17 @@ export function Hero() {
       />
       <div className="relative mx-auto w-full max-w-6xl px-5 pt-10 pb-14 sm:px-8 sm:pt-16 sm:pb-20">
         {/* Name steht schon im Header, hier reicht das Gesicht. */}
+        {/*
+          Angezeigt wird das Bild mit 56 px, die Datei ist doppelt so breit
+          fuer Bildschirme mit hoher Pixeldichte. Auf statischem Hosting gibt
+          es keine Bildoptimierung, die Datei wird also so ausgeliefert, wie
+          sie hier liegt.
+        */}
         <Image
-          src="/img/kerim-portrait.jpg"
+          src="/img/kerim-portrait.webp"
           alt="Kerim Quintino"
-          width={240}
-          height={240}
+          width={112}
+          height={112}
           priority
           className="mb-6 h-14 w-14 rounded-full border border-border object-cover"
         />

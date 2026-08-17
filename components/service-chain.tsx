@@ -76,7 +76,10 @@ export function ServiceChain() {
               key={s.title}
               className={cn(
                 "relative transition-all duration-500",
-                active ? "-translate-y-0.5 opacity-100" : "opacity-45",
+                // 45 Prozent Deckkraft drueckte den grauen Text unter die
+                // Kontrastschwelle. Der Unterschied zwischen wartend und aktiv
+                // bleibt sichtbar, die Station ist aber vorher schon lesbar.
+                active ? "-translate-y-0.5 opacity-100" : "opacity-75",
               )}
             >
               {s.handoff ? (
@@ -173,7 +176,8 @@ export function ServiceChain() {
               <div
                 className={cn(
                   "transition-opacity duration-500",
-                  active ? "opacity-100" : "opacity-45",
+                  // Gleiche Begruendung wie in der Desktopfassung oben.
+                  active ? "opacity-100" : "opacity-75",
                 )}
               >
                 <h3 className="text-xl font-semibold tracking-tight">

@@ -7,7 +7,7 @@ export function About() {
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_1fr] lg:gap-14">
         <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-secondary">
           <Image
-            src="/img/kerim.jpg"
+            src="/img/kerim.webp"
             alt="Kerim Quintino am Laptop"
             width={1000}
             height={1333}

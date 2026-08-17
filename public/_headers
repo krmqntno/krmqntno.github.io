@@ -1,0 +1,19 @@
+# Antwortheader fuer Cloudflare Pages. Auf GitHub Pages war diese Datei
+# wirkungslos, dort laesst sich kein eigener Header setzen.
+#
+# Bewusst keine Content Security Policy: nach dem Klick laedt die Seite ein
+# iframe von calendly.com, eine CSP muesste das durchlassen und braechte dann
+# kaum noch Schutz.
+
+/*
+  # Beim Wechsel auf eine fremde Seite geht nur die Domain mit, nicht die
+  # genaue Adresse.
+  Referrer-Policy: strict-origin-when-cross-origin
+  # Browser sollen den Dateityp nicht raten.
+  X-Content-Type-Options: nosniff
+  # Die Seite braucht weder Kamera noch Mikrofon noch Standort.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  # Niemand soll diese Seite in seinen eigenen Rahmen stecken.
+  X-Frame-Options: SAMEORIGIN
+  # Nur ueber https ausliefern, zwei Jahre lang.
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
