@@ -10,8 +10,8 @@ import { captureMode, lerp, reducedMotion, smooth, subscribe } from "./loop";
  * kippt es in den ersten 70 Prozent einer Bildschirmhoehe flach, danach ist
  * die Seite eine normale Seite.
  *
- * Dazu: vier KQ Kacheln starten mit 32 px neben dem Knopf, wachsen und
- * haengen sich an die oberen Ecken des Blatts, ziehen dann nach oben weg.
+ * Dazu: vier KQ Kacheln starten mit 32 px links und rechts der Knoepfe,
+ * wachsen und haengen sich an die Ecken des Blatts, ziehen dann nach oben weg.
  * Eine grosse unscharfe Kachel zieht in der Seitenmitte links vorbei.
  * Unten liegt ein Unschaerfeband (nah an der Linse), oben ein schwaches.
  */
@@ -44,7 +44,10 @@ export function FilmIntro() {
     const sheet = document.getElementById("sheet");
     const anchor = document.querySelector<HTMLElement>("[data-tile-anchor]");
     const stands = Array.from(document.querySelectorAll<HTMLElement>("[data-stand]"));
-    if (!sheet || !anchor || reducedMotion() || captureMode()) return;
+    const head = document.querySelector<HTMLElement>("h1");
+    const buttons = anchor ? Array.from(anchor.querySelectorAll<HTMLElement>("a")) : [];
+    const statRow = document.querySelector<HTMLElement>("#sheet dl");
+    if (!sheet || !anchor || !head || !statRow || !buttons.length || reducedMotion() || captureMode()) return;
 
     return subscribe(({ y, vw, vh }) => {
       const desk = vw >= 1024;
@@ -75,6 +78,19 @@ export function FilmIntro() {
 
       // Kacheln
       const a = anchor.getBoundingClientRect();
+      const first = buttons[0].getBoundingClientRect();
+      const last = buttons[buttons.length - 1].getBoundingClientRect();
+      // Linke Kante des Textes. Linke Kacheln bleiben die ganze Zeit links
+      // davon, sonst kreuzen sie die Headline.
+      const textL = head.getBoundingClientRect().left;
+      // Die Karten stehen beim Laden auf und ragen dann ueber die Reihe hinaus
+      const stats = Array.from(statRow.children).reduce(
+        (u, c) => {
+          const r = c.getBoundingClientRect();
+          return { left: Math.min(u.left, r.left), right: Math.max(u.right, r.right), top: Math.min(u.top, r.top) };
+        },
+        { left: Infinity, right: -Infinity, top: Infinity },
+      );
       const L = sheet.offsetLeft;
       const R = L + sheet.offsetWidth;
       const q = y / vh;
@@ -83,16 +99,33 @@ export function FilmIntro() {
       TILES.forEach((t, i) => {
         const el = tiles.current[i];
         if (!el) return;
-        const size = t.size * scaleBase;
-        let tx = t.side === "l" ? L + t.dx * size : R + t.dx * size;
-        tx = Math.min(vw - size - 8, Math.max(8, tx));
+        const left = t.side === "l";
+        // Schmaler Rand neben dem Text: linke Kacheln werden kleiner, statt
+        // auf die Headline zu rutschen.
+        const size = Math.min(t.size * scaleBase, left ? (textL - 14) / 0.65 : Infinity);
+        // Reihenfolge auf der eigenen Seite, fuer den Abstand beim Start
+        const j = TILES.slice(0, i).filter((o) => o.side === t.side).length;
+        let tx: number;
+        let sx: number;
+        if (left) {
+          // Darf zur Haelfte aus dem Bild ragen, aber nie an den Text
+          tx = Math.max(-size * 0.45, Math.min(L + t.dx * size, textL - 14 - size * 1.1));
+          sx = Math.max(-16, first.left - 18 - 32 - j * 40);
+        } else {
+          tx = Math.min(vw - size - 8, R + t.dx * size);
+          // Auf dem Handy ist die Knopfreihe so breit wie der Bildschirm
+          sx = Math.min(last.right + 18 + j * 40, vw - 44 - (1 - j) * 38);
+        }
         const ty = t.y < 1 ? vh * t.y : t.y;
-        // Auf dem Handy ist die Knopfreihe so breit wie der Bildschirm
-        const sx = Math.min(a.right + 18 + i * 40, vw - 44 - (3 - i) * 38);
         const sy = a.top + a.height / 2 - 16;
-        const x = lerp(sx, tx, e);
-        const yy = lerp(sy, ty, e) - Math.max(0, q - 0.45) * vh * t.trail;
+        // Rechts zuerst nach aussen, dann hoch, sonst streifen sie den Text
+        const x = lerp(sx, tx, left ? e : smooth(0.02, 0.22, q));
+        let yy = lerp(sy, ty, e) - Math.max(0, q - 0.45) * vh * t.trail;
         const s = lerp(32, size, e) / t.size;
+        // Die Zahlenreihe schiebt sich beim Scrollen von unten heran. Solange
+        // eine Kachel ueber ihr steht, bleibt sie oberhalb.
+        const w = s * t.size;
+        if (x + w * 1.1 > stats.left && x < stats.right) yy = Math.min(yy, stats.top - 18 - w * 1.1);
         // Auf schmalen Bildschirmen gibt es keinen Rand neben dem Blatt,
         // dort wuerden die Kacheln auf Text liegen.
         const gone = yy < -size - 40 || vw < 640;

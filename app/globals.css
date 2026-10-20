@@ -69,6 +69,14 @@ html {
   scroll-padding-top: 5rem;
 }
 
+/* Das gekippte Blatt ragt beim Einflug seitlich ueber den Bildschirm. Am
+   Handy zieht das sonst die Seite breiter. clip statt hidden, weil hidden
+   sticky und 3D bricht. */
+html,
+body {
+  overflow-x: clip;
+}
+
 body {
   /* Heller Studioboden: Mitte #f9fbfb, Ecken #f2f3f6 */
   background: radial-gradient(120% 90% at 50% 45%, var(--floor-mid) 0%, var(--page) 100%) fixed;

@@ -152,8 +152,14 @@ export function Finale() {
         { x: x - 26 * k, y: yTop - 26 * k, s: 56 * k, rot: -8 },
         { x: x + cw - 32 * k, y: yTop - 24 * k, s: 52 * k, rot: 8 },
         { x: x + cw - 20 * k, y: yTop + ch * 0.56, s: 40 * k, rot: -5 },
-        { x: x - 190 * k, y: yTop + ch - 120 * k + (1 - land) * 240, s: 240 * k, rot: 12 },
-        { x: x + cw - 60 * k, y: yTop + ch - 110 * k + (1 - land) * 240, s: 210 * k, rot: -10 },
+        // Am Handy gibt es keinen Rand neben der Karte, dort sitzen die
+        // weichen Kacheln unter ihr statt auf den Zahlen.
+        desk
+          ? { x: x - 190, y: yTop + ch - 120 + (1 - land) * 240, s: 240, rot: 12 }
+          : { x: x - 108, y: yTop + ch - 10 + (1 - land) * 240, s: 144, rot: 12 },
+        desk
+          ? { x: x + cw - 60, y: yTop + ch - 110 + (1 - land) * 240, s: 210, rot: -10 }
+          : { x: x + cw - 30, y: yTop + ch + 4 + (1 - land) * 240, s: 126, rot: -10 },
       ];
       spots.forEach((p, i) => {
         const el = tiles.current[i];
