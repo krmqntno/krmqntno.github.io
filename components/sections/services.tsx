@@ -7,7 +7,8 @@ export function Services() {
     <Section id="leistungen">
       <SectionHeader
         eyebrow="Leistungen"
-        title="Wir bauen deine Personenmarke. Zusammen."
+        title="Wir bauen deine Personenmarke."
+        tail="Zusammen."
         lead="Ich übernehme Skript, Schnitt, Grafiken, Captions und den Funnel. Du bringst dein Gesicht, dein Wissen und die Zeit, es zu zeigen."
       />
 

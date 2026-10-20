@@ -1,11 +1,13 @@
 import Image from "next/image";
-import { Section } from "@/components/section";
+import { Eyebrow, Section } from "@/components/section";
+import { Lift } from "@/components/film/lift";
 
 export function About() {
   return (
     <Section id="ueber-mich" className="bg-background">
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,420px)_1fr] lg:gap-14">
-        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border bg-secondary">
+        <Lift z={60} tilt={22} rest={0.25} radius={16}>
+        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-secondary">
           <Image
             src="/img/kerim.webp"
             alt="Kerim Quintino am Laptop"
@@ -16,13 +18,13 @@ export function About() {
             priority={false}
           />
         </div>
+        </Lift>
 
         <div className="max-w-xl">
-          <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.12em] text-primary">
-            Über mich
-          </p>
-          <h2 className="display text-3xl sm:text-4xl">
-            Du musst Instagram nicht verstehen. Ich mach das den ganzen Tag.
+          <Eyebrow>Über mich</Eyebrow>
+          <h2 className="display text-3xl sm:text-[40px]">
+            Du musst Instagram nicht verstehen.
+            <span className="tail block">Ich mach das den ganzen Tag.</span>
           </h2>
 
           <div className="mt-6 flex flex-col gap-4 text-[17px] leading-relaxed text-muted-foreground">

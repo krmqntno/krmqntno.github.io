@@ -3,14 +3,16 @@ import { ArrowRight } from "lucide-react";
 import { stats } from "@/content/site";
 import { CountUp } from "@/components/count-up";
 
+/**
+ * Der Hero ist der Startpunkt des Einflugs (components/film/intro.tsx).
+ * Alles mit p3d reicht die dritte Dimension bis zu den Stuecken durch, die
+ * mit data-stand beim Laden aufrecht zur Linse stehen. Kein overflow hidden
+ * hier, das wuerde sie flach druecken.
+ */
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-background">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 -top-40 h-[520px] bg-[radial-gradient(60%_60%_at_50%_0%,rgba(124,58,237,0.16),transparent_70%)]"
-      />
-      <div className="relative mx-auto w-full max-w-6xl px-5 pt-10 pb-14 sm:px-8 sm:pt-16 sm:pb-20">
+    <section className="p3d relative rounded-t-[inherit] bg-background">
+      <div className="p3d relative mx-auto w-full max-w-6xl px-5 pt-10 pb-14 sm:px-8 sm:pt-16 sm:pb-20">
         {/* Name steht schon im Header, hier reicht das Gesicht. */}
         {/*
           Angezeigt wird das Bild mit 56 px, die Datei ist doppelt so breit
@@ -27,10 +29,10 @@ export function Hero() {
           className="mb-6 h-14 w-14 rounded-full border border-border object-cover"
         />
 
-        <h1 className="display max-w-3xl text-[38px] sm:text-5xl lg:text-[68px]">
+        <h1 className="display max-w-3xl text-[40px] sm:text-5xl lg:text-[56px]">
           {/* Fester Umbruch, damit der zweite Satz nicht zerrissen wird. */}
           <span className="block">Menschen kaufen von Menschen.</span>
-          <span className="block">Nicht von Logos.</span>
+          <span className="tail block">Nicht von Logos.</span>
         </h1>
 
         <p className="mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground sm:text-lg">
@@ -39,10 +41,12 @@ export function Hero() {
           wirklich läuft.
         </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        {/* data-tile-anchor: hier starten die vier KQ Kacheln */}
+        <div data-tile-anchor className="p3d mt-8 flex flex-col gap-3 sm:flex-row">
           <a
             href="#kontakt"
-            className="inline-flex h-13 items-center justify-center gap-2 rounded-full bg-foreground px-8 text-base font-medium text-background transition-all hover:brightness-125 active:scale-[0.98]"
+            data-stand="24"
+            className="inline-flex h-13 items-center justify-center gap-2 rounded-full bg-foreground px-8 text-base font-medium text-background shadow-[0_10px_24px_-8px_rgba(26,33,51,0.4)] transition-[filter] hover:brightness-125"
           >
             Erstgespräch anfragen
             <ArrowRight size={18} />
@@ -55,10 +59,14 @@ export function Hero() {
           </a>
         </div>
 
-        <dl className="mt-14 grid grid-cols-2 gap-x-6 gap-y-8 border-t border-border pt-8 sm:grid-cols-4">
+        <dl className="p3d mt-14 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {stats.map((s, i) => (
-            <div key={s.label}>
-              <dt className="display text-[32px] tabular-nums sm:text-4xl">
+            <div
+              key={s.label}
+              data-stand={60 + (i % 2) * 20}
+              className="rounded-2xl border border-border bg-white px-5 py-4 shadow-[0_12px_30px_-12px_rgba(26,33,51,0.22)]"
+            >
+              <dt className="display text-[28px] tabular-nums sm:text-[32px]">
                 <CountUp
                   to={s.to}
                   decimals={"decimals" in s ? s.decimals : 0}
@@ -66,7 +74,7 @@ export function Hero() {
                   delay={i * 120}
                 />
               </dt>
-              <dd className="mt-2 text-sm text-muted-foreground">{s.label}</dd>
+              <dd className="mt-1.5 text-sm text-muted-foreground">{s.label}</dd>
             </div>
           ))}
         </dl>

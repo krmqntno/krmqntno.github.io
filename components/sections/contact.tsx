@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
 import { InstagramIcon } from "@/components/icons";
-import { Section } from "@/components/section";
+import { Eyebrow, Section } from "@/components/section";
+import { Lift } from "@/components/film/lift";
 import { CalendlyEmbed } from "@/components/calendly-embed";
 import { site } from "@/content/site";
 
@@ -9,11 +10,10 @@ export function Contact() {
     <Section id="kontakt">
       <div className="flex flex-col gap-10">
         <div className="max-w-2xl">
-          <p className="mb-3 text-[13px] font-medium uppercase tracking-[0.12em] text-primary">
-            Kontakt
-          </p>
-          <h2 className="display text-3xl sm:text-4xl">
-            Erzähl mir kurz, wo du stehst.
+          <Eyebrow>Kontakt</Eyebrow>
+          <h2 className="display text-3xl sm:text-[40px]">
+            Erzähl mir kurz,
+            <span className="tail block">wo du stehst.</span>
           </h2>
           <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
             Ich schaue mir dein Profil an und sage dir im Erstgespräch ehrlich,
@@ -21,7 +21,9 @@ export function Contact() {
           </p>
         </div>
 
-        <CalendlyEmbed />
+        <Lift z={22} tilt={8} rest={0.15} radius={16}>
+          <CalendlyEmbed />
+        </Lift>
 
         {/* Ausweg fuer alle, die lieber erst schreiben. */}
         <div className="flex flex-wrap items-center gap-x-8 gap-y-3 border-t border-border pt-6 text-[15px]">

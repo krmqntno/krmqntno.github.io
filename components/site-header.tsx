@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { nav, site } from "@/content/site";
+import { KqGlyph } from "@/components/film/kq";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -29,12 +30,15 @@ export function SiteHeader() {
       className={cn(
         "sticky top-0 z-50 transition-colors",
         scrolled
-          ? "border-b border-border bg-background/80 backdrop-blur-xl"
+          ? "bg-[#f6f7f9]/75 backdrop-blur-xl"
           : "bg-transparent"
       )}
     >
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8">
-        <Link href="/" className="text-[15px] font-semibold tracking-tight">
+        <Link href="/" className="inline-flex items-center gap-2.5 text-[15px] font-medium tracking-tight">
+          <span className="inline-flex size-7 items-center justify-center rounded-[7px] bg-[#1d1d1f] text-white">
+            <KqGlyph className="size-[22px]" />
+          </span>
           {site.name}
         </Link>
 

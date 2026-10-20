@@ -6,7 +6,8 @@ export function Process() {
     <Section id="ablauf" className="bg-background">
       <SectionHeader
         eyebrow="Ablauf"
-        title="Vier Schritte, keine Überraschungen."
+        title="Vier Schritte,"
+        tail="keine Überraschungen."
         lead="Du weißt vorher, was passiert, wer was macht und wann du das erste Ergebnis siehst."
       />
 

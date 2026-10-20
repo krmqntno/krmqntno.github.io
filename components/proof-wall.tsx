@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, Maximize2, X } from "lucide-react";
 import { CountUp } from "@/components/count-up";
+import { Lift } from "@/components/film/lift";
 import { cn } from "@/lib/utils";
 import { proofReels, type ProofReel } from "@/content/proof";
 
@@ -65,7 +66,7 @@ export function ProofWall() {
   return (
     <div id="ergebnisse" className="mt-14 scroll-mt-24 border-t border-border pt-10">
       <h3 className="display max-w-2xl text-2xl sm:text-3xl">
-        Irgendwann ist das dein Screenshot.
+        Irgendwann ist das <span className="tail leading-[inherit]">dein Screenshot.</span>
       </h3>
       <div className="mt-10 grid gap-8 lg:grid-cols-[minmax(0,300px)_1fr] lg:items-center lg:gap-14">
         {/* Zahlen zur aktuellen Folie, zaehlen bei jedem Wechsel neu hoch */}
@@ -148,11 +149,12 @@ export function ProofWall() {
         </div>
 
         {/* Wischbare Screenshots, bestes Reel zuerst */}
+        <Lift className="order-1 min-w-0 lg:order-2" z={44} tilt={16} radius={16}>
         <div
           ref={scroller}
           onScroll={onScroll}
           /* relative, damit offsetLeft der Folien gegen den Scroller misst */
-          className="relative order-1 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-2 lg:order-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          className="relative flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {proofReels.map((r, i) => (
             <button
@@ -180,6 +182,7 @@ export function ProofWall() {
             </button>
           ))}
         </div>
+        </Lift>
       </div>
 
       {open ? (

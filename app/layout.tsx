@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { Fraunces, Space_Grotesk } from "next/font/google";
+import { Geist, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { site } from "@/content/site";
 
 /**
- * Schriftpaar fuer den Hero: Fraunces auf voller Weichheit als bauchiger
- * Retro-Serif, dazu Space Grotesk als nuechternes Gegenstueck.
+ * Schriftpaar wie im Film: Geist fuer alles, Instrument Serif kursiv fuer
+ * den grauen Nachsatz. next/font legt beide beim Bauen lokal ab, im Browser
+ * gibt es keine Anfrage an Google.
  */
-const display = Fraunces({
+const sans = Geist({
   subsets: ["latin"],
-  axes: ["SOFT", "WONK", "opsz"],
-  variable: "--font-display",
+  variable: "--font-sans",
   display: "swap",
 });
 
-const sub = Space_Grotesk({
+const serif = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-sub",
+  weight: "400",
+  style: "italic",
+  variable: "--font-serif",
   display: "swap",
 });
 
@@ -66,8 +68,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="de"
-      className={`${display.variable} ${sub.variable} h-full antialiased`}
+      className={`${sans.variable} ${serif.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        {/* Flache Fassung fuer das Standbild im Finale, siehe scripts/capture-sheet.mjs */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if(/[?&]capture/.test(location.search))document.documentElement.setAttribute('data-capture','')",
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <SiteHeader />
         <main className="flex-1">{children}</main>

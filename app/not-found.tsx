@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Sheet } from "@/components/sheet";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
  */
 export default function NotFound() {
   return (
-    <div className="mx-auto flex w-full max-w-2xl flex-col items-start px-5 py-24 sm:px-8 sm:py-32">
+    <Sheet className="mt-2 mb-16">
+      <div className="mx-auto flex w-full max-w-2xl flex-col items-start px-5 py-24 sm:px-8 sm:py-32">
       <p className="text-[13px] font-medium uppercase tracking-[0.12em] text-primary">
         Fehler 404
       </p>
@@ -33,6 +35,7 @@ export default function NotFound() {
         <ArrowLeft size={18} />
         Zurück zur Startseite
       </Link>
-    </div>
+      </div>
+    </Sheet>
   );
 }

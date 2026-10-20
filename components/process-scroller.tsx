@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { process } from "@/content/process";
+import { Lift } from "@/components/film/lift";
 
 export function ProcessScroller() {
   const [active, setActive] = useState(0);
@@ -82,8 +83,9 @@ export function ProcessScroller() {
               i === active ? "opacity-100" : "lg:opacity-35"
             )}
           >
-            <div className="rounded-2xl border border-border bg-card p-7 sm:p-9 lg:border-0 lg:bg-transparent lg:p-0">
-              <span className="text-[13px] font-medium tracking-[0.12em] text-primary">
+            <Lift z={26} tilt={10} radius={16}>
+            <div className="rounded-2xl border border-border bg-card p-7 sm:p-9">
+              <span className="text-[13px] font-medium tabular-nums text-muted-foreground">
                 {p.step}
               </span>
               <h3 className="display mt-3 text-2xl sm:text-3xl lg:text-4xl">
@@ -93,6 +95,7 @@ export function ProcessScroller() {
                 {p.body}
               </p>
             </div>
+            </Lift>
           </li>
         ))}
       </ol>

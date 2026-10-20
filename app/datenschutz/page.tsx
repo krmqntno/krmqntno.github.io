@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Sheet } from "@/components/sheet";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -38,7 +39,8 @@ export const metadata: Metadata = {
  */
 export default function Datenschutz() {
   return (
-    <div className="mx-auto w-full max-w-2xl px-5 py-20 sm:px-8 sm:py-28">
+    <Sheet className="mt-2 mb-16">
+      <div className="mx-auto w-full max-w-2xl px-5 py-20 sm:px-8 sm:py-28">
       <h1 className="display text-4xl">Datenschutzerklärung</h1>
 
       <p className="mt-4 text-sm text-muted-foreground">
@@ -301,6 +303,7 @@ export default function Datenschutz() {
           </p>
         </section>
       </div>
-    </div>
+      </div>
+    </Sheet>
   );
 }
