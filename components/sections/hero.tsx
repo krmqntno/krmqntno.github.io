@@ -29,7 +29,7 @@ export function Hero() {
           className="mb-6 h-14 w-14 rounded-full border border-border object-cover"
         />
 
-        <h1 className="display max-w-3xl text-[40px] sm:text-5xl lg:text-[56px]">
+        <h1 className="display text-[40px] sm:text-[56px] lg:text-[60px] xl:text-[68px]">
           {/* Fester Umbruch, damit der zweite Satz nicht zerrissen wird. */}
           <span className="block">Menschen kaufen von Menschen.</span>
           <span className="tail block">Nicht von Logos.</span>

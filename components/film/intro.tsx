@@ -34,6 +34,18 @@ const TILES: TileSpec[] = [
   { tone: "dark", size: 84, side: "r", dx: -0.42, y: 0.58, rot: -6, trail: 1.15 },
 ];
 
+/** Umkehrung von smoothstep, per Halbierung. */
+function unsmooth(v: number) {
+  let lo = 0;
+  let hi = 1;
+  for (let n = 0; n < 20; n++) {
+    const m = (lo + hi) / 2;
+    if (m * m * (3 - 2 * m) < v) lo = m;
+    else hi = m;
+  }
+  return (lo + hi) / 2;
+}
+
 export function FilmIntro() {
   const tiles = useRef<(HTMLDivElement | null)[]>([]);
   const passer = useRef<HTMLDivElement>(null);
@@ -83,6 +95,10 @@ export function FilmIntro() {
       // Linke Kante des Textes. Linke Kacheln bleiben die ganze Zeit links
       // davon, sonst kreuzen sie die Headline.
       const textL = head.getBoundingClientRect().left;
+      // Tatsaechliche Zeilen der Headline, nicht ihr Block
+      const lines = document.createRange();
+      lines.selectNodeContents(head);
+      const hr = lines.getBoundingClientRect();
       // Die Karten stehen beim Laden auf und ragen dann ueber die Reihe hinaus
       const stats = Array.from(statRow.children).reduce(
         (u, c) => {
@@ -100,9 +116,12 @@ export function FilmIntro() {
         const el = tiles.current[i];
         if (!el) return;
         const left = t.side === "l";
-        // Schmaler Rand neben dem Text: linke Kacheln werden kleiner, statt
-        // auf die Headline zu rutschen.
-        const size = Math.min(t.size * scaleBase, left ? (textL - 14) / 0.65 : Infinity);
+        // Schmaler Rand neben dem Text: Kacheln werden kleiner, statt auf die
+        // Headline zu rutschen.
+        const size = Math.min(
+          t.size * scaleBase,
+          left ? (textL - 14) / 0.65 : (vw - 8 - (Math.max(hr.right, stats.right) + 14)) / 1.15,
+        );
         // Reihenfolge auf der eigenen Seite, fuer den Abstand beim Start
         const j = TILES.slice(0, i).filter((o) => o.side === t.side).length;
         let tx: number;
@@ -118,14 +137,28 @@ export function FilmIntro() {
         }
         const ty = t.y < 1 ? vh * t.y : t.y;
         const sy = a.top + a.height / 2 - 16;
-        // Rechts zuerst nach aussen, dann hoch, sonst streifen sie den Text
-        const x = lerp(sx, tx, left ? e : smooth(0.02, 0.22, q));
-        let yy = lerp(sy, ty, e) - Math.max(0, q - 0.45) * vh * t.trail;
+        // Rechts zuerst nach aussen, dann hoch. Gestiegen wird erst, wenn die
+        // Kachel an Headline und Zahlenreihe vorbei ist. Den Zeitpunkt liefert
+        // die Umkehrung der Seitwaertsbewegung, so gibt es keinen Sprung.
+        let ey = e;
+        let ex = e;
+        if (!left) {
+          ex = smooth(0.02, 0.22, q);
+          const f = (Math.max(hr.right, stats.right) + 14 + size * 0.15 - sx) / (tx - sx);
+          const qc = 0.02 + 0.2 * unsmooth(Math.min(1, Math.max(0, f)));
+          ey = smooth(qc, Math.max(qc + 0.16, 0.38), q);
+        }
+        const x = lerp(sx, tx, ex);
+        let yy = lerp(sy, ty, ey) - Math.max(0, q - 0.45) * vh * t.trail;
         const s = lerp(32, size, e) / t.size;
         // Die Zahlenreihe schiebt sich beim Scrollen von unten heran. Solange
         // eine Kachel ueber ihr steht, bleibt sie oberhalb.
         const w = s * t.size;
-        if (x + w * 1.1 > stats.left && x < stats.right) yy = Math.min(yy, stats.top - 18 - w * 1.1);
+        if (x + w * 1.1 > stats.left) {
+          // Stufenlos loslassen, waehrend die Kachel rechts an der Reihe vorbeizieht
+          const hold = Math.min(1, Math.max(0, (stats.right + 14 + w * 0.6 - x) / (w * 0.6)));
+          yy -= Math.max(0, yy - (stats.top - 18 - w * 1.1)) * hold;
+        }
         // Auf schmalen Bildschirmen gibt es keinen Rand neben dem Blatt,
         // dort wuerden die Kacheln auf Text liegen.
         const gone = yy < -size - 40 || vw < 640;
